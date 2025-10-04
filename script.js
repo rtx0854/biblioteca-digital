@@ -12,7 +12,7 @@ const libros = [
   { 
     titulo: "Antígona González", 
     autor: "Sara Uribe", 
-    portada: "img/antigona_gonzales.JPG", 
+    portada: "img/antigona_gonzales.jpg", 
     descripcion: "Antígona González busca a su hermano desaparecido en Tamaulipas, México, en medio de la violencia del narcotráfico.",
     link: "libros/Antigona Gonzales.pdf",
     genero: "Drama"
@@ -378,6 +378,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
 
 
