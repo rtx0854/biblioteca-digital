@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📚 BookVerse </title>
+
+  <!-- Fuente elegante de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ====== Estilo Mejorado ====== */
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background: #f4f6fb;
+      color: #333;
+      line-height: 1.6;
+      transition: all 0.3s ease-in-out;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: #fff;
+      padding: 25px 0;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 2.4em;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      border-bottom: 2px solid transparent;
+      font-size: 1.1em;
+    }
+
+    nav a:hover {
+      color: #f1c40f;
+      border-bottom: 2px solid #f1c40f;
+    }
+
+    .buscador {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    #searchInput {
+      padding: 12px 20px;
+      width: 60%;
+      max-width: 400px;
+      border-radius: 30px;
+      border: 1px solid #bbb;
+      font-size: 1em;
+      outline: none;
+      transition: box-shadow 0.3s ease;
+    }
+
+    #searchInput:focus {
+      box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
+    }
+
+    main {
+      text-align: center;
+      padding: 20px;
+    }
+
+    main h2 {
+      font-family: 'Merriweather', serif;
+      font-size: 2em;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 0 40px;
+    }
+
+    .libro {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding-bottom: 15px;
+    }
+
+    .libro:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .portada {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .libro h3 {
+      margin: 10px 0 5px;
+      color: #2c3e50;
+      font-size: 1.2em;
+      font-family: 'Merriweather', serif;
+    }
+
+    .libro p {
+      margin: 0 10px 8px;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #2980b9;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #3498db;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+
+    /* Animación sutil para la entrada */
+    .catalogo, header, main, footer {
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📚 BookVerse </h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="autores.html">Autores</a>
+      <a href="ubicanos.html">Ubícanos</a>
+    </nav>
+  </header>
+
+  <section class="buscador">
+    <input type="text" id="searchInput" placeholder="🔍 Buscar un libro...">
+  </section>
+
+  <main>
+    <h2>Catálogo de Libros</h2>
+    <div id="catalogo" class="catalogo">
+      <!-- Libros cargados con JavaScript -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Biblioteca Digital — Hecho con ❤️ para los lectores</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
