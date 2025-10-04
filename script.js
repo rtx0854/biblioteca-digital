@@ -14,7 +14,7 @@ const libros = [
     autor: "Sara Uribe", 
     portada: "img/Antigona Gonzales.jpg", 
     descripcion: "Antígona González busca a su hermano desaparecido en Tamaulipas, México, en medio de la violencia del narcotráfico.",
-    link: "libros/Antigona Gonzales.pdf",
+    link: "https://drive.google.com/drive/folders/1KcGwl2yPhUjfhnziGrNIObIAPPvH9uah?usp=sharing",
     genero: "Drama"
   },
   { 
@@ -22,7 +22,7 @@ const libros = [
     autor: "Miguel de Cervantes",
     portada: "img/don_quijote.jpg", 
     descripcion: "La gran novela clásica de la literatura española. Aventuras, humor y crítica social a través de Don Quijote y Sancho Panza.",
-    link: "libros/don_quijote.pdf",
+    link: "https://drive.google.com/drive/folders/1KcGwl2yPhUjfhnziGrNIObIAPPvH9uah?usp=sharing",
     genero: "Fantasía"
   },
   { 
@@ -30,7 +30,7 @@ const libros = [
     autor: "Salvador Gallardo Cabrera",
     portada: "img/La mundanza de los poderes.jpg", 
     descripcion: "Relato histórico sobre el traslado del gobierno peruano a Ayacucho en 1889 durante el mandato de Cáceres.",
-    link: "libros/La mundanza de los poderes.pdf",
+    link: "https://drive.google.com/drive/folders/1KcGwl2yPhUjfhnziGrNIObIAPPvH9uah?usp=sharing",
     genero: "Historia"
   },
   { 
@@ -897,4 +897,5 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("modo", oscuro ? "oscuro" : "claro");
     });
   }
+
 });
