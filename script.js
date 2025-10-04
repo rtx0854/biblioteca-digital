@@ -12,7 +12,7 @@ const libros = [
   { 
     titulo: "Antígona González", 
     autor: "Sara Uribe", 
-    portada: "img/antigona gonzales.jpg", 
+    portada: "img/Antigona Gonzales.jpg", 
     descripcion: "Antígona González busca a su hermano desaparecido en Tamaulipas, México, en medio de la violencia del narcotráfico.",
     link: "libros/Antigona Gonzales.pdf",
     genero: "Drama"
@@ -114,7 +114,7 @@ const libros = [
     genero: "Literatura peruana"
   },
   { 
-    titulo: "drácula", 
+    titulo: "Drácula", 
     autor: "Bram Stoker",
     portada: "img/dracula.jpg",
     descripcion: "La legendaria historia del Conde Drácula, símbolo eterno del miedo, la seducción y lo sobrenatural.",
@@ -356,3 +356,25 @@ document.head.appendChild(estiloAnimacion);
 window.mostrarTodo = () => mostrarLibros(libros);
 window.filtrarPorGenero = (g) => filtrarPorGenero(g);
 
+// ===============================
+// 🌙 MODO NOCTURNO (versión persistente entre páginas)
+// ===============================
+document.addEventListener("DOMContentLoaded", () => {
+  const modoBtn = document.getElementById("modoBtn");
+
+  // 🔄 Aplica el modo guardado al cargar cualquier página
+  const modoGuardado = localStorage.getItem("modo");
+  if (modoGuardado === "oscuro") {
+    document.body.classList.add("dark-mode");
+    if (modoBtn) modoBtn.textContent = "☀️";
+  }
+
+  // 🎛️ Escucha el botón si existe
+  if (modoBtn) {
+    modoBtn.addEventListener("click", () => {
+      const oscuro = document.body.classList.toggle("dark-mode");
+      modoBtn.textContent = oscuro ? "☀️" : "🌙";
+      localStorage.setItem("modo", oscuro ? "oscuro" : "claro");
+    });
+  }
+});
