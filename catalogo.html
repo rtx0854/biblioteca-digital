@@ -52,5 +52,24 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btnModo = document.getElementById("modo-btn");
+
+    // 🔹 Leer el modo guardado (oscuro o claro)
+    const modoGuardado = localStorage.getItem("modo");
+    if (modoGuardado === "oscuro") {
+      document.body.classList.add("modo-oscuro");
+      btnModo.textContent = "☀️ Modo claro";
+    }
+
+    // 🔹 Cambiar entre modos y guardar preferencia
+    btnModo.addEventListener("click", () => {
+      const esOscuro = document.body.classList.toggle("modo-oscuro");
+      btnModo.textContent = esOscuro ? "☀️ Modo claro" : "🌙 Modo oscuro";
+      localStorage.setItem("modo", esOscuro ? "oscuro" : "claro");
+    });
+  });
+</script>
 </body>
 </html>
