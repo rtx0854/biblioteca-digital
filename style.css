@@ -262,3 +262,102 @@ footer {
     height: 160px;
   }
 }
+/* ============================
+   🌙 MODO OSCURO
+   ============================ */
+body.modo-oscuro {
+  --color-bg: #1e1e1e;
+  --color-text: #f5f5f5;
+  --color-primary: #8aacdf;
+  --color-secondary: #3b82f6;
+  --color-accent: #60a5fa;
+  --color-white: #2c2c2c;
+}
+
+body.modo-oscuro header,
+body.modo-oscuro footer {
+  background: #0d1117;
+}
+
+body.modo-oscuro .libro,
+body.modo-oscuro .autor {
+  background: #2c2c2c;
+  color: var(--color-text);
+}
+
+body.modo-oscuro nav a {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+body.modo-oscuro nav a:hover,
+body.modo-oscuro nav a.activo {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+body.modo-oscuro input[type="text"] {
+  background: #333;
+  color: #fff;
+  border-color: var(--color-accent);
+}
+
+body.modo-oscuro button,
+body.modo-oscuro .btn {
+  background: #89a2e4;
+}
+
+body.modo-oscuro footer {
+  color: #ddd;
+}
+
+/* ✨ Animación suave entre modos */
+body {
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* ============================
+   🫧 MENÚ EN BURBUJAS
+   ============================ */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+nav a {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav a:hover,
+nav a.activo {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.05);
+}
+
+/* ============================
+   🌗 BOTÓN DE MODO OSCURO
+   ============================ */
+.modo-btn {
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-top: 10px;
+  transition: 0.3s;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modo-btn:hover {
+  background: #555;
+}
