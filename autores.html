@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autores - BookVerse </title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>📚 BookVerse </h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="autores.html" class="activo">Autores</a>
+      <a href="ubicanos.html">Ubícanos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro fade-in">
+      <h2>Autores Destacados</h2>
+      <p>
+        En esta sección encontrarás a los escritores cuyas obras forman parte de nuestra Biblioteca Digital.
+        Cada uno de ellos ha contribuido con su talento y visión única al mundo de la literatura.
+      </p>
+    </section>
+
+    <section id="listaAutores" class="autores fade-in">
+      <!-- Autores cargados dinámicamente desde script.js -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Biblioteca Digital — Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btnModo = document.getElementById("modo-btn");
+
+    // 🔹 Leer el modo guardado (oscuro o claro)
+    const modoGuardado = localStorage.getItem("modo");
+    if (modoGuardado === "oscuro") {
+      document.body.classList.add("modo-oscuro");
+      btnModo.textContent = "☀️ Modo claro";
+    }
+
+    // 🔹 Cambiar entre modos y guardar preferencia
+    btnModo.addEventListener("click", () => {
+      const esOscuro = document.body.classList.toggle("modo-oscuro");
+      btnModo.textContent = esOscuro ? "☀️ Modo claro" : "🌙 Modo oscuro";
+      localStorage.setItem("modo", esOscuro ? "oscuro" : "claro");
+    });
+  });
+</script>
+</body>
+</html>
