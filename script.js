@@ -12,7 +12,7 @@ const libros = [
   { 
     titulo: "Antígona González", 
     autor: "Sara Uribe", 
-    portada: "img/Antigona Gonzales.jpg", 
+    portada: "img/antigona gonzales.jpg", 
     descripcion: "Antígona González busca a su hermano desaparecido en Tamaulipas, México, en medio de la violencia del narcotráfico.",
     link: "libros/Antigona Gonzales.pdf",
     genero: "Drama"
@@ -114,7 +114,7 @@ const libros = [
     genero: "Literatura peruana"
   },
   { 
-    titulo: "Drácula", 
+    titulo: "drácula", 
     autor: "Bram Stoker",
     portada: "img/dracula.jpg",
     descripcion: "La legendaria historia del Conde Drácula, símbolo eterno del miedo, la seducción y lo sobrenatural.",
@@ -355,3 +355,4 @@ document.head.appendChild(estiloAnimacion);
 // ===============================
 window.mostrarTodo = () => mostrarLibros(libros);
 window.filtrarPorGenero = (g) => filtrarPorGenero(g);
+
