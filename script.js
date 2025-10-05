@@ -12,7 +12,7 @@ const libros = [
   { 
     titulo: "Antígona González", 
     autor: "Sara Uribe", 
-    portada: "img/antigona gonzales.jpg", 
+    portada: "img/Antigona Gonzales.jpg", 
     descripcion: "Antígona González busca a su hermano desaparecido en Tamaulipas, México, en medio de la violencia del narcotráfico.",
     link: "libros/Antigona Gonzales.pdf",
     genero: "Drama"
@@ -608,7 +608,7 @@ const autores = [
   },
   {
   nombre: "Emilio Salgari",
-  foto: "img/Emilio_Salgari.jpg",
+  foto: "img/emilio_salgari.jpg",
   bio: "Novelista italiano célebre por sus relatos de aventuras llenos de acción y exotismo. Su personaje más famoso es Sandokán.",
   libros: ["El Corsario Negro", "Los tigres de Mompracem"]
 },
@@ -897,8 +897,8 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("modo", oscuro ? "oscuro" : "claro");
     });
   }
-
 });
+
 
 
 
