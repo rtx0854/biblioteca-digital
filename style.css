@@ -31,17 +31,16 @@ body {
    HEADER
    ============================ */
 header {
-  position: fixed;
+  position: fixed;          /* 🔒 Se queda fijo arriba */
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1000;            /* Evita que otros elementos lo tapen */
   background: var(--color-primary);
   color: var(--color-white);
   text-align: center;
   padding: 1.5rem 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: var(--transition);
-  z-index: 1000; /* se mantiene por encima de todo */
 }
 
 header h1 {
@@ -385,6 +384,7 @@ body.modo-oscuro .autor {
   background: #262626;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
+
 
 
 
