@@ -45,8 +45,10 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 1.8rem;
-  letter-spacing: 1px;
+}
+
+main {
+  margin-top: 160px;
 }
 
 /* 🔧 Margen superior para el contenido principal */
@@ -385,6 +387,7 @@ body.modo-oscuro .autor {
   background: #262626;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
+
 
 
 
