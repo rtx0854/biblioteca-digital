@@ -26,32 +26,23 @@ body {
   line-height: 1.6;
   transition: background 0.5s ease, color 0.5s ease;
 }
+
 /* ============================
-   HEADER (FIJO AL HACER SCROLL)
+   HEADER
    ============================ */
 header {
-  position: fixed;          /* 🔒 Se queda fijo arriba */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;            /* Evita que otros elementos lo tapen */
   background: var(--color-primary);
   color: var(--color-white);
   text-align: center;
-  padding: 1.2rem 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: var(--transition);
 }
 
-/* 🔧 Espacio para que el contenido no quede detrás del header */
-main {
-  margin-top: 200px; /* Ajusta según la altura del header */
-}
-
-/* 🌙 En modo oscuro, el header también cambia correctamente */
-body.modo-oscuro header {
-  background: #0d1117;
-  color: #f5f5f5;
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
 }
 
 nav {
@@ -384,9 +375,6 @@ body.modo-oscuro .autor {
   background: #262626;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
-
-
-
 
 
 
