@@ -43,6 +43,9 @@ header h1 {
   margin: 0;
   font-size: 1.8rem;
   letter-spacing: 1px;
+   /* 🔧 Evita que el header tape el contenido */
+main {
+  margin-top: 140px; /* ajusta si tu header es más alto o más bajo */
 }
 
 nav {
@@ -376,9 +379,6 @@ body.modo-oscuro .autor {
   background: #262626;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
-/* 🔧 Evita que el header tape el contenido */
-main {
-  margin-top: 140px; /* ajusta si tu header es más alto o más bajo */
-}
+
 
 
