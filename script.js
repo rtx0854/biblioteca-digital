@@ -608,7 +608,7 @@ const autores = [
   },
   {
   nombre: "Emilio Salgari",
-  foto: "img/emilio_salgari.jpg",
+  foto: "img/Emilio_Salgari.jpg",
   bio: "Novelista italiano célebre por sus relatos de aventuras llenos de acción y exotismo. Su personaje más famoso es Sandokán.",
   libros: ["El Corsario Negro", "Los tigres de Mompracem"]
 },
@@ -899,5 +899,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
 
 
