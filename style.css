@@ -27,7 +27,7 @@ body {
   transition: background 0.5s ease, color 0.5s ease;
 }
 /* ============================
-   HEADER FIJO
+   HEADER
    ============================ */
 header {
   position: fixed;
@@ -40,20 +40,18 @@ header {
   padding: 1.5rem 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: var(--transition);
-  z-index: 999; /* Mantiene el header encima del contenido */
+  z-index: 1000; /* se mantiene por encima de todo */
 }
 
 header h1 {
   margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
 }
 
+/* 🔧 Evita que el header tape el contenido */
 main {
-  margin-top: 160px;
-}
-
-/* 🔧 Margen superior para el contenido principal */
-main {
-  margin-top: 160px; /* Ajusta si tu header es más alto */
+  margin-top: 160px; /* Ajusta este valor si tu header es más alto o más bajo */
 }
 
 nav {
@@ -387,6 +385,7 @@ body.modo-oscuro .autor {
   background: #262626;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
+
 
 
 
