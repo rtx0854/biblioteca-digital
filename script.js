@@ -1,13 +1,3 @@
-/* ============================
-   📚 BIBLIOTECA DIGITAL JS
-   ============================
-   Autor: Tu Nombre
-   Descripción: Gestión dinámica de libros y autores.
-   ============================ */
-
-// ===============================
-// 📘 LISTA DE LIBROS
-// ===============================
 const libros = [
   { 
     titulo: "Antígona González", 
@@ -464,9 +454,7 @@ const libros = [
 
 ];
 
-// ===============================
-// 👩‍💻 MOSTRAR LIBROS EN CATÁLOGO
-// ===============================
+
 const catalogo = document.getElementById("catalogo");
 
 const mostrarLibros = (lista) => {
@@ -488,9 +476,7 @@ const mostrarLibros = (lista) => {
   });
 };
 
-// ===============================
-// ✍️ MOSTRAR AUTORES
-// ===============================
+
 const autores = [
   {
     nombre: "Miguel de Cervantes",
@@ -795,9 +781,7 @@ const autores = [
 
 ];
 
-// ===============================
-// MOSTRAR AUTORES EN AUTORES.HTML
-// ===============================
+
 const mostrarAutores = () => {
   const contenedor = document.getElementById("listaAutores");
   if (!contenedor) return;
@@ -818,9 +802,7 @@ const mostrarAutores = () => {
   });
 };
 
-// ===============================
-// 🔎 BÚSQUEDA EN VIVO DE LIBROS
-// ===============================
+
 const buscarLibro = () => {
   const input = document.getElementById("searchInput");
   if (!input) return;
@@ -838,25 +820,19 @@ const buscarLibro = () => {
 const inputBusqueda = document.getElementById("searchInput");
 if (inputBusqueda) inputBusqueda.addEventListener("input", buscarLibro);
 
-// ===============================
-// 🎭 FILTRAR POR GÉNERO
-// ===============================
+
 const filtrarPorGenero = (genero) => {
   const filtrados = libros.filter(libro => libro.genero === genero);
   mostrarLibros(filtrados);
 };
 
-// ===============================
-// 🚀 INICIALIZACIÓN AUTOMÁTICA
-// ===============================
+
 document.addEventListener("DOMContentLoaded", () => {
   if (catalogo) mostrarLibros(libros);
   mostrarAutores();
 });
 
-// ===============================
-// 💫 ANIMACIÓN SUAVE
-// ===============================
+
 const estiloAnimacion = document.createElement("style");
 estiloAnimacion.textContent = `
   .fade-in {
@@ -870,26 +846,22 @@ estiloAnimacion.textContent = `
 `;
 document.head.appendChild(estiloAnimacion);
 
-// ===============================
-// 🌟 HACER FUNCIONAR BOTONES HTML
-// ===============================
+
 window.mostrarTodo = () => mostrarLibros(libros);
 window.filtrarPorGenero = (g) => filtrarPorGenero(g);
 
-// ===============================
-// 🌙 MODO NOCTURNO (versión persistente entre páginas)
-// ===============================
+
 document.addEventListener("DOMContentLoaded", () => {
   const modoBtn = document.getElementById("modoBtn");
 
-  // 🔄 Aplica el modo guardado al cargar cualquier página
+  
   const modoGuardado = localStorage.getItem("modo");
   if (modoGuardado === "oscuro") {
     document.body.classList.add("dark-mode");
     if (modoBtn) modoBtn.textContent = "☀️";
   }
 
-  // 🎛️ Escucha el botón si existe
+  
   if (modoBtn) {
     modoBtn.addEventListener("click", () => {
       const oscuro = document.body.classList.toggle("dark-mode");
@@ -898,6 +870,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
 
 
